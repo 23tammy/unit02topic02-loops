@@ -49,11 +49,11 @@ public class Loops {
     for (int x = 1; x <= n; x++){
       if (n%x == 0){
         factors[index] = factor;
-       
+        index++;
       }
-      index++;
+      
     }
-
+    
 
     return factors;
     
