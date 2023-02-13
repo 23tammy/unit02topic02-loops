@@ -43,11 +43,15 @@ public class Loops {
       if (n%i == 0){
         factor = i;
         factors = new int[factors.length+1];
-        
       }
     }
-    for (int x = 0; x < factors.length; x++){
-      factors[x] = factor;
+    int index = 0;
+    for (int x = 1; x <= n; x++){
+      if (n%x == 0){
+        factors[index] = factor;
+       
+      }
+      index++;
     }
 
 
@@ -66,7 +70,7 @@ public class Loops {
     nHellos(1);
     nRandoms(1);
     System.out.println(isPrime(19));
-    System.out.println(Arrays.toString(getFactors(1)));;
+    System.out.println(Arrays.toString(getFactors(13)));;
 
   }
 
