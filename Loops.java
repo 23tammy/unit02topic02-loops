@@ -37,26 +37,28 @@ public class Loops {
   }
 
   public static int[] getFactors(int n) {
-    int[] factors = new int[2];
-    factors[0] = 1;
-    factors[factors.length-1] = n;
-    for (int i = n-1; i > 1; i--){
+    int[] factors = new int[0];
+    int factor = 0;
+    for (int i = 1; i <= n; i++ ){ //array with correct # of factors- 0
       if (n%i == 0){
-        
-        for (int minus = 2; minus < factors.length; minus++ ){
-          factors = new int[factors.length+1];
-          factors[0] = 1;
-          factors[factors.length-1] = n;
-          factors[factors.length-minus] = i;
-
-        }
+        factors = new int[factors.length+1];
+        factor = i;
       }
     }
-    
+    for (int x = 0; x < n; x++){
+      factors[x] = factor;
+    }  
+
     return factors;
+    
 
 
   }
+
+  //private static int rollDie() {}
+
+  //public static void PepysSim() {}
+
   public static void main(String[] args) {
     
     nHellos(1);
