@@ -14,7 +14,6 @@ public class Loops {
         System.out.println(i + "th hello");
       }
     }
-
   }
 
   public static double nRandoms(int n) {
@@ -29,7 +28,6 @@ public class Loops {
   }
 
   public static boolean isPrime(int n) {
-
     for (int i = n-1; i > 1; i--){
       if (n%i == 0){
         return false;
@@ -38,12 +36,33 @@ public class Loops {
     return true;
   }
 
+  public static int[] getFactors(int n) {
+    int[] factors = new int[2];
+    factors[0] = 1;
+    factors[factors.length-1] = n;
+    for (int i = n-1; i > 1; i--){
+      if (n%i == 0){
+        
+        for (int minus = 2; minus < factors.length; minus++ ){
+          factors = new int[factors.length+1];
+          factors[0] = 1;
+          factors[factors.length-1] = n;
+          factors[factors.length-minus] = i;
 
+        }
+      }
+    }
+    
+    return factors;
+
+
+  }
   public static void main(String[] args) {
     
     nHellos(1);
     nRandoms(1);
     System.out.println(isPrime(19));
+    System.out.println(Arrays.toString(getFactors(57)));;
 
   }
 
