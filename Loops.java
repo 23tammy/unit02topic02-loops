@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Loops {
 
   public static void nHellos (int n){
@@ -26,11 +28,23 @@ public class Loops {
     return(sum / n);
   }
 
+  public static boolean isPrime(int n) {
+
+    for (int i = n-1; i > 1; i--){
+      if (n%i == 0){
+        return false;
+      }
+    }
+    return true;
+  }
+
 
   public static void main(String[] args) {
     
     nHellos(1);
-    nRandoms(3);
+    nRandoms(1);
+    System.out.println(isPrime(19));
 
   }
+
 }
