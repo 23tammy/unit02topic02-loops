@@ -15,10 +15,22 @@ public class Loops {
 
   }
 
+  public static double nRandoms(int n) {
+    double num = 0;
+    double sum = 0;
+    for (int i = 0; i < n; i++){
+      num = Math.random();
+      System.out.println(num);
+      sum += num;
+    }
+    return(sum / n);
+  }
+
 
   public static void main(String[] args) {
     
-    nHellos(300);
+    nHellos(1);
+    nRandoms(3);
 
   }
 }
