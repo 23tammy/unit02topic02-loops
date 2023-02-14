@@ -38,39 +38,78 @@ public class Loops {
 
   public static int[] getFactors(int n) {
     int[] factors = new int[0];
-    int factor = 0;
     for (int i = 1; i <= n; i++ ){ //array with correct # of factors- 0
       if (n%i == 0){
-        factor = i;
         factors = new int[factors.length+1];
       }
     }
     int index = 0;
     for (int x = 1; x <= n; x++){
       if (n%x == 0){
-        factors[index] = factor;
+        factors[index] = x; //x is what changes
         index++;
       }
+    }
+    return factors;
+  }
+
+  private static int rollDie() {
+    int die6 = (int) ((Math.random()*6) + 1);
+    return die6;
+  }
+
+  private static int rollDieSixTimes() { //rolling a 1 six times
+    int count6 = 0;
+    int atLeast1 = 0;
+    for (int i = 0; i < 6; i++){
+      int currentRoll = rollDie();
+      System.out.println(currentRoll);
+      if (currentRoll == 1){
+        count6++;
+      }
+    }
+    if (count6 >= 1){
+      atLeast1++;
+    }
+  }
+
+  private static int rollDieTwelveTimes() {
+    int count12 = 0;
+    int atLeast1 = 0;
+    for (int i = 0; i < 12; i++){
+      int currentRoll = rollDie();
+      System.out.println(currentRoll);
+      if (currentRoll == 1){
+        count12++;
+      }
+    }
+    if (count12 >= 1){
+      atLeast1++;
+    }
+  }
+
+  public static void PepysSim() {
+
+    int trials = 20;
+    for (int i = 0; i < trials; i++){
       
     }
+   
     
-
-    return factors;
-    
-
+    }
+    System.out.println("\n");
+    System.out.println()
+    System.out.println();
 
   }
 
-  //private static int rollDie() {}
-
-  //public static void PepysSim() {}
-
   public static void main(String[] args) {
     
-    nHellos(1);
-    nRandoms(1);
-    System.out.println(isPrime(19));
-    System.out.println(Arrays.toString(getFactors(13)));;
+    //nHellos(300);
+    //nRandoms(1);
+    //System.out.println(isPrime(19));
+    //System.out.println(Arrays.toString(getFactors(24)));;
+    PepysSim();
 
   }
 
