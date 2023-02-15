@@ -68,9 +68,7 @@ public class Loops {
         count6++;
       }
     }
-    if (count6 >= 1){
-      atLeast1++;
-    }
+    return count6;
   }
 
   private static int rollDieTwelveTimes() {
@@ -83,25 +81,30 @@ public class Loops {
         count12++;
       }
     }
-    if (count12 >= 1){
-      atLeast1++;
-    }
+    return count12;
   }
 
   public static void PepysSim() {
-
+    int atLeast1 = 0;
     int trials = 20;
     for (int i = 0; i < trials; i++){
-      
+      int result = rollDieSixTimes();
+      if (result >= 1){
+        atLeast1++;
+      }
     }
+    for (int i = 0; i < trials; i++){
+      rollDieTwelveTimes();
+    }
+    System.out.print()
+
+
    
     
     }
-    System.out.println("\n");
-    System.out.println()
-    System.out.println();
 
-  }
+
+  
 
   public static void main(String[] args) {
     
