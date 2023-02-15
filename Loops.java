@@ -102,18 +102,12 @@ public class Loops {
     }
     System.out.println("Likelyhood of at least 1 one six times: " + (atLeast1/trials) + "\nLikelyhood of at least 1 one twelve times: " + (atLeast1again/trials));
     }
-
-
-  
-
-  public static void main(String[] args) {
     
+  public static void main(String[] args) {
     //nHellos(300);
     //nRandoms(1);
     //System.out.println(isPrime(19));
     //System.out.println(Arrays.toString(getFactors(24)));;
     PepysSim();
-
   }
-
 }
