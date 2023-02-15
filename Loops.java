@@ -98,7 +98,7 @@ public class Loops {
         atLeast1again++;
       }
     }
-    System.out.println("Likelyhood of at least 1 one six times: " + (atLeast1/trials) + "%\nLikelyhood of at least 1 twice twelve times: " + (atLeast1again/trials) + "%");
+    System.out.println("Likelyhood of at least 1 one six times: " + (atLeast1/trials)*100 + "%\nLikelyhood of at least 1 twice twelve times: " + (atLeast1again/trials)*100 + "%");
     }
     
   public static void main(String[] args) {
