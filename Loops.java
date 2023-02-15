@@ -63,7 +63,7 @@ public class Loops {
     int atLeast1 = 0;
     for (int i = 0; i < 6; i++){
       int currentRoll = rollDie();
-      System.out.println(currentRoll);
+      //System.out.println(currentRoll);
       if (currentRoll == 1){
         count6++;
       }
@@ -76,7 +76,7 @@ public class Loops {
     int atLeast1 = 0;
     for (int i = 0; i < 12; i++){
       int currentRoll = rollDie();
-      System.out.println(currentRoll);
+      //System.out.println(currentRoll);
       if (currentRoll == 1){
         count12++;
       }
@@ -86,7 +86,8 @@ public class Loops {
 
   public static void PepysSim() {
     int atLeast1 = 0;
-    int trials = 20;
+    int atLeast1again = 0;
+    int trials = 20000;
     for (int i = 0; i < trials; i++){
       int result = rollDieSixTimes();
       if (result >= 1){
@@ -94,13 +95,12 @@ public class Loops {
       }
     }
     for (int i = 0; i < trials; i++){
-      rollDieTwelveTimes();
+      int result = rollDieTwelveTimes();
+      if (result >= 1){
+        atLeast1again++;
+      }
     }
-    System.out.print()
-
-
-   
-    
+    System.out.println("Likelyhood of at least 1 one six times: " + ((double)atLeast1 / (double)trials) + "\nLikelyhood of at least 1 one twelve times: " + ((double)atLeast1again / (double)trials));
     }
 
 
