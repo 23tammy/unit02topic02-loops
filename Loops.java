@@ -60,7 +60,6 @@ public class Loops {
 
   private static int rollDieSixTimes() { //rolling a 1 six times
     int count6 = 0;
-    int atLeast1 = 0;
     for (int i = 0; i < 6; i++){
       int currentRoll = rollDie();
       //System.out.println(currentRoll);
@@ -73,7 +72,6 @@ public class Loops {
 
   private static int rollDieTwelveTimes() {
     int count12 = 0;
-    int atLeast1 = 0;
     for (int i = 0; i < 12; i++){
       int currentRoll = rollDie();
       //System.out.println(currentRoll);
@@ -96,11 +94,11 @@ public class Loops {
     }
     for (int i = 0; i < trials; i++){
       int result = rollDieTwelveTimes();
-      if (result >= 1){
+      if (result >= 2){
         atLeast1again++;
       }
     }
-    System.out.println("Likelyhood of at least 1 one six times: " + (atLeast1/trials) + "\nLikelyhood of at least 1 one twelve times: " + (atLeast1again/trials));
+    System.out.println("Likelyhood of at least 1 one six times: " + (atLeast1/trials) + "\nLikelyhood of at least 1 twice twelve times: " + (atLeast1again/trials));
     }
     
   public static void main(String[] args) {
